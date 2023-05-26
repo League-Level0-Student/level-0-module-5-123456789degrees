@@ -14,10 +14,36 @@ public class Calculator {
 				JOptionPane.INFORMATION_MESSAGE, null, new String[] { "divide", "multiply", "subtract", "add" }, null);
 
 		// 3) Call the correct method depending on what option the user chooses
+		if (task == 0) {
+			JOptionPane.showMessageDialog(null, result(divide(number1, number2)));
+		}
+		else if (task == 1) {
+			JOptionPane.showMessageDialog(null, result(multiply(number1, number2)));
+		}
+		else if (task == 3) {
+			JOptionPane.showMessageDialog(null, result(add(number1, number2)));
+		}
+		else {
+			JOptionPane.showMessageDialog(null, result(subtract(number1, number2)));
+		}
 		
 		// 4) Call the result() method and put the answer in a pop-up
 	}
-	
+	public static int add(int a, int b) {
+		return a + b;
+	}
+	public static int subtract(int a, int b) {
+		return a - b;
+	}
+	public static int multiply(int a, int b) {
+		return a * b;
+	}
+	public static int divide(int a, int b) {
+		return a / b;
+	}
+	public static String result(int n) {
+		return "Your answer is " + n;
+	}
 	// 1) Make 4 static methods (add, subtract, multiply, divide)
 	//		They should each take 2 numbers as parameters
 	//		and return the answer.
