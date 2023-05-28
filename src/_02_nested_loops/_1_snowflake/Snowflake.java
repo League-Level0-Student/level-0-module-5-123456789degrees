@@ -25,11 +25,11 @@ public class Snowflake {
 				rob.setPenColor(255,0,0);
 			}
 			for (int j = 0; j < 6; j++) {
-				rob.turn(270);
+				rob.turn(240);
 				rob.move(50);
 			}
+			rob.setPenColor(0,0,0);
 		}
-		rob.setPenColor(0,0,0);
 		// #4. Set the robot’s speed to 5
 
 
